@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <title>Flipkart-Items-List</title>
+
+    <link href="./listing.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://i.ibb.co/bb64gtt/flipkart-logo.png" alt="flipkart-logo">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./listing.js"></script>
+</head>
+
+<body>
+    <div class="headerdiv">
+        <div id="name_">
+            <i>Flipkart</i>
+        </div>
+        <div id="tagname">
+            <i>Explore Plus</i>
+        </div>
+        <div id="searchdiv">
+            <input id="searchbar" placeholder="Search for products, brands and more" />
+            <i class="fa fa-search checked"></i>
+        </div>
+
+
+        <div id="account">
+            <span onclick="loginClicked()" id="loginName">My Account</span>
+            <ul class="accountHoverDiv list">
+                <li><i class="fa fa-user-circle-o checked"></i> My Profile</li>
+                <li><i class="fa fa-bolt checked"></i> SuperCoin Zone</li>
+                <li><i class="fa fa-shopping-bag checked"></i> Orders</li>
+                <li><i class="fa fa-heart checked"></i> Wishlist</li>
+                <li><i class="fa fa-vcard checked"></i> My Chats</li>
+                <li><i class="fa fa-ticket checked"></i> Coupons</li>
+                <li><i class="fa fa-drivers-license checked"></i> Gift Cards</li>
+                <li><i class="fa fa-power-off checked"></i> Logout</li>
+            </ul>
+        </div>
+        <div id="more">
+            <span>More <i class="fa fa-angle-down"></i></span>
+            <ul class="moreHoverDiv  list">
+                <li> <i class="fa fa-bell-o checked"></i> Notifications</li>
+                <li><i class="fa fa-briefcase checked"></i>Sell on Flipkart</li>
+                <li><i class="fa fa-headphones checked"></i>24 x 7 Customer Care</li>
+                <li><i class="fa fa-line-chart checked"></i>Advertise</li>
+                <li><i class="fa fa-download checked"></i>Download App</li>
+            </ul>
+
+        </div>
+
+        <div id="cart">
+            <a href="./cart.html">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
+           
+            <div id="modecontainer">
+                <img src="https://i.ibb.co/MsHMbvB/logo-dark-mode.png" alt="darkmode" class="mode-button light"
+                    onclick="darkMode()" />
+                <img src="https://i.ibb.co/gjz9tkd/3591906.png" class="mode-button dark" onclick="lightMode()" />
+            </div>
+        </div>
+    </div>
+    <div class="quicksearch">
+        <ul>
+            <li>Electronics</li>
+            <li>TV & Appliances</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Baby & Kids</li>
+            <li>Home & Furniture</li>
+            <li>Sports, Books & More</li>
+            <li>Flight</li>
+            <li>Offer Zone</li>
+            <li>Grocery</li>
+        </ul>
+    </div>
+    <div id="mainpage">
+        <div id="rightpage">
+            <span id="displayimg"></span>
+        </div>
+        <div id="leftpage">
+            <p id="price">PRICE :</p>
+            <select id="selectrange">
+                <option>0 to 250</option>
+                <option>250 to 500</option>
+                <option>500 to 1000</option>
+                <option>1000 to 1500</option>
+                <option>1500 to 2000</option>
+                <option>Above 2000</option>
+            </select>
+            <p id="sortby">SORT BY :</p>
+            <form id="sortform">
+                <input type="radio" name="sortby" /> POPULARITY<br>
+                <input type="radio" name="sortby" /> PRICE LOW -- HIGH<br>
+                <input type="radio" name="sortby" /> PRICE HIGH -- LOW<br>
+                <input type="radio" name="sortby" /> NEWEST FIRST<br>
+            </form>
+            
+        </div>
+        
+    </div>
+    <footer>
+        <div class="footer">
+            <h1 id="copy">&copy; Vignesh Bhandarkar</h1>
+            <ul class="list1">
+                <li>Contact Us</li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Flipkart Stories</li>
+                <li>Press</li>
+                <li>Flipkart Wholesale</li>
+                <li>Corporate Information</li>
+            </ul>
+
+            <ul class="list1">
+                <li>Payments</li>
+                <li>Shipping</li>
+                <li>Cancellation & Returns</li>
+                <li>FAQ</li>
+                <li>Report Infringement</li>
+            </ul>
+
+            <ul class="list1">
+                <li>Return Policy</li>
+                <li>Terms Of Use</li>
+                <li>Security</li>
+                <li>Privacy</li>
+                <li>Sitemap</li>
+                <li>EPR Compliance</li>
+            </ul>
+
+            <ul class="list1">
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+<html>
+
+<head>
+    <title>My Profile</title>
+    <link href="./profile.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://i.ibb.co/bb64gtt/flipkart-logo.png" alt="flipkart-logo">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="profile.js"></script>
+    <style>
+        a {
+            color: hsla(0, 0%, 0%, 0.918);
+        }
+
+        a:hover {
+            color: #2874f0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headerdiv">
+        <div id="name_">
+            <i>Flipkart</i>
+        </div>
+        <div id="tagname">
+            <i>Explore Plus</i>
+        </div>
+        <div id="searchdiv">
+            <input id="searchbar" placeholder="Search for products, brands and more" />
+            <i class="fa fa-search checked"></i>
+        </div>
+
+
+        <div id="account">
+            <span onclick="loginClicked()" id="loginName">My Account</span>
+            <ul class="accountHoverDiv list">
+                <li><i class="fa fa-user-circle-o checked"></i> My Profile</li>
+                <li><i class="fa fa-bolt checked"></i> SuperCoin Zone</li>
+                <li><i class="fa fa-shopping-bag checked"></i> Orders</li>
+                <li><i class="fa fa-heart checked"></i> Wishlist</li>
+                <li><i class="fa fa-vcard checked"></i> My Chats</li>
+                <li><i class="fa fa-ticket checked"></i> Coupons</li>
+                <li><i class="fa fa-drivers-license checked"></i> Gift Cards</li>
+                <li><i class="fa fa-power-off checked"></i> Logout</li>
+            </ul>
+        </div>
+        <div id="more">
+            <span>More <i class="fa fa-angle-down"></i></span>
+            <ul class="moreHoverDiv  list">
+                <li> <i class="fa fa-bell-o checked"></i> Notifications</li>
+                <li><i class="fa fa-briefcase checked"></i>Sell on Flipkart</li>
+                <li><i class="fa fa-headphones checked"></i>24 x 7 Customer Care</li>
+                <li><i class="fa fa-line-chart checked"></i>Advertise</li>
+                <li><i class="fa fa-download checked"></i>Download App</li>
+            </ul>
+
+        </div>
+
+        <div id="cart">
+            <i class="fa fa-shopping-cart"></i>
+            <span>Cart</span>
+            <div id="modecontainer">
+                <img src="https://i.ibb.co/MsHMbvB/logo-dark-mode.png" alt="darkmode" class="mode-button light"
+                    onclick="darkMode()" />
+                <img src="https://i.ibb.co/gjz9tkd/3591906.png" class="mode-button dark" onclick="lightMode()" />
+            </div>
+        </div>
+    </div>
+    <div class="quicksearch">
+        <ul>
+            <li>Electronics</li>
+            <li>TV & Appliances</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Baby & Kids</li>
+            <li>Home & Furniture</li>
+            <li>Sports, Books & More</li>
+            <li>Flight</li>
+            <li>Offer Zone</li>
+            <li>Grocery</li>
+        </ul>
+    </div>
+    <div class="maindiv">
+        <div class="leftpanel">
+            <div class="welcomediv">
+                <img src="https://i.ibb.co/pdmFXmQ/822711-user-512x512.png" class="profile-avatar" alt="profile avatar "
+                    width="50px" height="50px">
+            </div>
+            <div class="menubar">
+                <ul class="navigations">
+                    <li onclick="ordersDisplay()"><i class="fa fa-shopping-bag icons"></i>MY ORDERS</li>
+                    <li><i class="fa fa-user-circle-o icons"></i>ACCOUNT SETTINGS<ul class="sublist">
+                            <li onclick="profileDisplay()">Profile Information</li>
+                            <li>MANAGE ADDRESSES</li>
+                            <li>PAN Card Information</li>
+                        </ul>
+                    </li>
+
+                    <li><i class="fa fa-credit-card icons"></i>PAYMENTS<ul class="sublist">
+                            <li>Gift Cards</li>
+                            <li>Saved UPI</li>
+                            <li>Saved Cards</li>
+                        </ul>
+                    </li>
+
+                    <li><i class="fa fa-comment icons"></i>MY CHATS</li>
+                    <li><i class="fa fa-vcard icons"></i>MY STUFF<ul class="sublist">
+                            <li>My Coupons</li>
+                            <li>My Reviews & Ratings</li>
+                            <li>All Notifications</li>
+                            <li>My WishList</li>
+                        </ul>
+                    </li>
+
+                    <li><i class="fa fa-power-off icons"></i>LOGOUT</li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightpanel-orders">
+            <input id="searchbar2" type="text" placeholder="Search your orders here" />
+            <button class="sub-search-btn"><i class="fa fa-search search"></i>Search Orders</button>
+            <div class="filterdiv">
+                <p id="filterhead">Filters</p>
+                <p class="filtersubhead">ORDER STATUS</p>
+                <div class="filter-status">
+                    <form class="filter-status-form">
+                        <input id="ontheway" type="checkbox" />
+                        <label for="ontheway">On The Way</label>
+                        <br>
+                        <input id="delivered" type="checkbox" />
+                        <label for="delivered">Delivered</label>
+                        <br>
+                        <input id="cancelled" type="checkbox" />
+                        <label for="cancelled">Cancelled</label>
+                        <br>
+                        <input id="returned" type="checkbox" />
+                        <label for="returned">Returned</label>
+                        <br>
+                    </form>
+                </div>
+
+                <p class="filtersubhead2">ORDER TIME</p>
+                <div class="filter-order-time">
+                    <form class="filter-time-form">
+                        <input id="ThisYear" type="checkbox" />
+                        <label for="ThisYear">This Year</label>
+                        <br>
+                        <input id="2021" type="checkbox" />
+                        <label for="2021">2021</label>
+                        <br>
+                        <input id="2020" type="checkbox" />
+                        <label for="2020">2020</label>
+                        <br>
+                        <input id="older" type="checkbox" />
+                        <label for="older">older</label>
+                        <br>
+                    </form>
+                </div>
+            </div>
+            <div class="list-main-container">
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-div">
+                    <div class="order-image">
+                        <img src="https://i.ibb.co/86ZXv4G/potronics.jpg" alt="mouse" />
+                    </div>
+                    <div class="order-name">
+                        <p class="item-name">PORTRONICS OPTICAL MOUSE</p>
+                        <p class="item-seller">Seller: RetailNet</p>
+                    </div>
+                    <div class="order-status">
+                        <ul class="delivery-status">
+                            <li>Delivered on 28th Feb 2022</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightpanel-profileinfo">
+            <div class="profileinfo-readonly">
+                <p class="title-heading">Profile Information<i onclick="editPersonal()" class="fa fa-pencil-square-o icons"></i></p>
+                <form>
+                    <div id="displayFirst" class="profilename_"></div>
+                    <div id="displayLast" class="profilename_"></div>
+                    <div class="gender-select">
+                        <input type="radio" name="gender" class="gender"  disabled="disabled" />
+                        <label>MALE</label>
+                        <input type="radio" name="gender" class="gender"   disabled="disabled" />
+                        <label >FEMALE</label>
+                    </div>  
+                </form>  
+            </div>
+            <div class="profileinfo-edit">
+                <p class="title-heading">Profile Information<i onclick="closePersonal()" class="fa fa-remove icons"></i></p>
+                <form id="form" onsubmit="submitHandler()">
+                    <input id="first" type="text" class="profilename-editable"  placeholder="FIRST NAME" required />
+                    <input id="last" type="text" class="profilename-editable" placeholder="LAST NAME" required />
+                    <button  onclick="savePersonalInfo()" id="save" class="save">SAVE</button>
+                    <div class="gender-select">
+                        <input id="male" type="radio" name="gender" class="gender"  />
+                        <label for="male">MALE</label>
+                        <input id="female" type="radio" name="gender" class="gender"  />
+                        <label for="female">FEMALE</label>
+                    </div>  
+                </form>  
+            </div>
+            <div class="emaiinfo-readonly">
+                <p class="title-heading">Email Address<i class="fa fa-pencil-square-o icons"></i></p>
+                <div id="displayEmail" class="profilename"></div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <h1 id="copy">&copy; Vignesh Bhandarkar</h1>
+                <ul class="list1">
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Flipkart Stories</li>
+                    <li>Press</li>
+                    <li>Flipkart Wholesale</li>
+                    <li>Corporate Information</li>
+                </ul>
+
+                <ul class="list1">
+                    <li>Payments</li>
+                    <li>Shipping</li>
+                    <li>Cancellation & Returns</li>
+                    <li>FAQ</li>
+                    <li>Report Infringement</li>
+                </ul>
+
+                <ul class="list1">
+                    <li>Return Policy</li>
+                    <li>Terms Of Use</li>
+                    <li>Security</li>
+                    <li>Privacy</li>
+                    <li>Sitemap</li>
+                    <li>EPR Compliance</li>
+                </ul>
+
+                <ul class="list1">
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

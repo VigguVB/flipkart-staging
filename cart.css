@@ -1,0 +1,49 @@
+body{
+    background-image: url("https://i.ibb.co/SNwTzJ3/Walmart-Flipkart.jpg");
+}
+.cartModal{
+    width: 50%;
+    margin-left: 25%;
+    box-shadow: inset 3px 3px 8px black;
+    background-color: white;
+    margin-top: 3%;
+    overflow-y: scroll;
+}
+h1{
+    font-family: Hack;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.home{
+    width: 350px;
+    margin-top: 1%;
+    margin-left: 26%;
+    text-align: center;
+    height: 60px;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: orangered;
+    border: none;
+    float: left;
+    position: absolute;
+  
+}
+.shop{
+    width: 350px;
+    margin-top: 1%;
+    margin-left: 50%;
+    text-align: center;
+    height: 60px;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: #069606;
+    border: none;
+    float: left;
+    position: absolute;
+
+}

@@ -1,0 +1,269 @@
+body{
+    width: 100%;
+    font-family: Arial,sans-serif;
+    margin: 0;
+}
+
+.headerdiv{
+    width: 100%;
+    height: 56px;
+    background-color: #2874f0;
+    position: relative;
+    margin-top: -0.2%;
+    position: fixed;
+    z-index: 100;
+}
+
+#name_{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 12%;
+    margin-top: 0.3%;
+}
+
+#tagname{
+    color: rgb(246, 250, 12);
+    font-size: 11px;
+    margin-left: 13%;
+    margin-top: 0.2%;
+    font-weight: 600;
+}
+#searchdiv{
+    float: left;
+    margin-left: 20%;
+    margin-top: -3%;
+}
+#searchbar{
+    width: 550px;
+    height: 38px;
+    font-size: 16px;
+    border: none;
+    
+}
+.checked{
+    color: #2874f0;
+    margin-left: -5%;
+}
+
+#account{
+    margin-top: -2.5%;
+    height: 42px;
+    margin-left: 60% ;
+    float: left;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;  
+
+}
+
+.accountHoverDiv{
+    width: 240px;
+    margin-top: 1%;
+    margin-left: -4%;
+    opacity: 100%;
+    background-color: white;
+    box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.781);
+    visibility: hidden;
+    position: relative;
+    z-index: 100;
+    border-radius: 4px;
+    color: hsla(0, 0%, 0%, 0.918);   
+}
+.accountHoverDiv>li{
+    list-style-type: none;
+    line-height: 3;
+    border-bottom: 0.5px solid rgba(143, 138, 138, 0.185);
+    width: 100%;
+    margin-left: -5%;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+}
+#account:hover .accountHoverDiv{
+    visibility: visible;
+}
+.accountHoverDiv:hover .moreHoverDiv{
+    visibility: visible;
+}
+.accountHoverDiv>li:hover{
+    color: #2874f0;
+}
+#more{
+    margin-top: -2.9%;
+    float: left;
+    margin-left: 70%;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    height: 40px;
+}
+#more:hover .moreHoverDiv{
+    visibility: visible;
+}
+.moreHoverDiv:hover .moreHoverDiv{
+    visibility: visible;
+}
+.moreHoverDiv{
+    width: 240px;
+    margin-top: 1%;
+    margin-left: -6.5%;
+    opacity: 100%;
+    background-color: white;
+    box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.781);
+    position: absolute;
+    visibility: hidden;
+    z-index: 100;
+    border-radius: 4px;
+    color: hsla(0, 0%, 0%, 0.918);   
+}
+.moreHoverDiv>li{
+    list-style-type: none;
+    line-height: 3;
+    border-bottom: 0.5px solid rgba(143, 138, 138, 0.185);
+    width: 100%;
+    margin-left: -5%;
+    text-align: left;
+    margin-right: -10%;
+    font-size: 15px;
+    font-weight: 500;
+}
+.moreHoverDiv>li:hover{
+    color: #2874f0;
+
+}
+#cart{
+    color: white;
+    margin-top: -2.6%;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    height: 40px;
+    margin-left: 79%;
+}
+#modecontainer{
+    width: 200px;
+    margin-left: 50%;
+    height: 40px;
+    float: left;
+    margin-top: -13%;
+}
+.mode-button{
+    width: 40px;
+    margin-left: 2%;
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    margin-top: -4%;
+}
+.light{
+    
+    color: #2874f0;
+    border: none;
+}
+.dark{
+    color: white;
+    border: none;
+}
+.symbol{
+    font-size: 22px;
+}
+
+/* mainpage start */
+
+.quicksearch{
+    width: 100%;
+    height: 33px;
+    border-bottom: 2px groove hsla(0, 15%, 91%, 0.603);
+    position: fixed;
+    margin-top: -2.8%;
+    z-index: 50;
+    background-color: white;
+}
+.quicksearch>ul>li{
+    list-style-type: none;
+    font-weight: 600;
+    float: left;
+    margin-left: 3.2%;
+    margin-right: 1%;
+    margin-top: 0.3%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li:hover{
+    color: #2874f0;
+
+}
+
+#mainpage{
+    width: 100%;
+    height: 500px;
+
+}
+#leftpage{
+    width: 20%;
+    height: 400px;
+    margin-top: 4%;
+    margin-left: 1%;
+    box-shadow: inset 1px 1px 12px blue;
+    float: left;
+}
+#rightpage{
+    width: 77%;
+    margin-top: 4%;
+    margin-left: 0.5%;
+    box-shadow: inset 1px 1px 12px blue;
+    float: left; 
+}
+#price{
+    margin-top: 15%;
+    margin-left: 15%;
+    font-weight: 600;
+    font-size: 17px;
+}
+#selectrange{
+    margin-left: 10%;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+}
+#sortby{
+    margin-top: 15%;
+    margin-left: 15%;
+    font-weight: 600;
+    font-size: 17px;  
+}
+#sortform{
+    margin-left: 10%;  
+}
+
+/* Footer start */
+
+.footer{
+    width: 100%;
+    margin-top: 1%;
+    background-color: hsla(240, 88%, 10%, 0.904);
+    height: 300px;
+    float: left;
+}
+.list1{
+    margin-left: 11%;
+    color: white;
+    font-size: 12px;
+    padding-top: 1.5%;
+    line-height: 2.5;
+    float: left;
+}
+.list1>li{
+    list-style-type: none;
+    
+}
+#copy{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding-top: 1.5%;
+}
+.mainclass:hover{
+    box-shadow: 2px 2px 12px blue;
+}
